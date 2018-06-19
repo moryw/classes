@@ -1,4 +1,4 @@
-//sampe code from cc
+//sample code from cc
 class Dog {
   constructor(name) {
     this._name = name;
@@ -16,3 +16,13 @@ class Dog {
     this._behavior ++;
   }
 }
+
+const halley = new Dog('Halley');
+console.log(halley);
+console.log(halley.name); // Print name value to console
+console.log(halley.behavior); // Print behavior value to console
+halley.incrementBehavior(); // Add one to behavior
+console.log(halley.name); // Print name value to console
+console.log(halley.behavior); // Print behavior value to console
+
+//
