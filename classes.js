@@ -79,6 +79,10 @@ class HospitalEmployee {
     this._remainingVacationDays = this._remainingVacationDays - daysOff;
   }
 
+  static generatePassword() {
+    return Math.floor(Math.random()*10000);
+  }
+
 }
 
 //nurse child/sub class that extends the hospital employee
@@ -100,10 +104,29 @@ class Nurse extends HospitalEmployee {
 
 const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
 
-console.log(nurseOlynyk.certifications);
-nurseOlynyk.addCertification('Genetics');
-console.log(nurseOlynyk.certifications);
+//doctor child/sub class that extends the HospitalEmployee
+class Doctor extends HospitalEmployee {
+  constructor(name, insurance) {
+    super(name);
+    this._insurance = insurance;
+  }
 
+  get insurance() {
+    if (this._insurance === true) {
+      return `This doctor has insurance.`;
+    } else if (this._insurance === false) {
+      return `This doctor does not have insurance.`;
+    } else {
+      return `Insurance Unknown`;
+    };
+  }
+}
+
+const doctorMatt = new Doctor('Matt','True');
+
+console.log(doctorMatt.name);
+console.log(doctorMatt.remainingVacationDays);
+console.log(doctorMatt.insurance);
 
 
 
