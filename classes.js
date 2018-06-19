@@ -18,12 +18,12 @@ class Dog {
 }
 
 const halley = new Dog('Halley');
-console.log(halley);
-console.log(halley.name); // Print name value to console
-console.log(halley.behavior); // Print behavior value to console
-halley.incrementBehavior(); // Add one to behavior
-console.log(halley.name); // Print name value to console
-console.log(halley.behavior); // Print behavior value to console
+// console.log(halley);
+// console.log(halley.name); // Print name value to console
+// console.log(halley.behavior); // Print behavior value to console
+// halley.incrementBehavior(); // Add one to behavior
+// console.log(halley.name); // Print name value to console
+// console.log(halley.behavior); // Print behavior value to console
 
 //surgeon class
 class Surgeon {
@@ -34,6 +34,12 @@ class Surgeon {
 }
 
 const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
+const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
+
+console.log(surgeonCurry._name);
+console.log(surgeonDurant._name);
+
+console.log(surgeonCurry._department);
 
 
 
