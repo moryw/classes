@@ -19,8 +19,12 @@ class Media {
     return this._ratings;
   }
 
-  toggleCheckOutStatus(newStatus) {
-    return this._isCheckedOut = newStatus;
+  toggleCheckOutStatus() {
+    if (this._isCheckedOut === false) {
+      this._isCheckedOut = true;
+    } else {
+      this._isCheckedOut = false;
+    }
   }
 
   getAverageRating() {
@@ -81,6 +85,35 @@ class Movie extends Media {
 const testMovie = new Movie('Test Title', 'Test Director', 90);
 
 //console.log(testMovie);
+
+//CD sub class
+class CD extends Media {
+  constructor(title, artist ) {
+    super(title);
+    this._artist = artist;
+    this._songs = [];
+  }
+
+  get artist() {
+    return this._artist;
+  }
+
+  get songs() {
+    return this._songs;
+  }
+
+  addSong(newSong) {
+    this._songs.push(newSong);
+  }
+
+}
+
+const testCD = new CD('Test Title', 'Test Artist');
+
+
+
+
+
 
 
 
