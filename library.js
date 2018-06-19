@@ -58,7 +58,29 @@ class Book extends Media {
 
 const testBook = new Book('Test Title', 'Test Author', 100);
 
+//console.log(testBook);
 
+//Movies sub class
+class Movie extends Media {
+  constructor(title, director, runtime) {
+    super(title);
+    this._director = director;
+    this._runtime = runtime;
+  }
+
+  get director() {
+    return this._director;
+  }
+
+  get runtime() {
+    return this._runtime;
+  }
+
+}
+
+const testMovie = new Movie('Test Title', 'Test Director', 90);
+
+//console.log(testMovie);
 
 
 
